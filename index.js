@@ -16,10 +16,10 @@ app.use(cors());
 // Create a todo
 
 app.post("/todos", async function (req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const { description } = req.body;
-    console.log(description);
+    // console.log(description);
     const newTodo = await pool.query(
       "INSERT INTO detail (description) VALUES($1) RETURNING *",
       [description]
